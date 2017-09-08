@@ -1,6 +1,11 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class OfflineComponent extends Component {
+  static propTypes = {
+    children: PropTypes.func.isRequired,
+  };
+
   state = {
     isOnline: window.navigator.onLine,
   };

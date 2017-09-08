@@ -3,7 +3,9 @@
   "version": "0.0.2",
   "description": "React higher-order component for detecting network offline state",
   "main": "lib/offline.js",
-  "files": ["lib/OfflineComponent.js"],
+  "files": [
+    "lib/OfflineComponent.js"
+  ],
   "scripts": {
     "clean": "rm -rf lib",
     "build": "babel src -d lib",
@@ -53,5 +55,8 @@
   },
   "peerDependencies": {
     "react": "^15.6.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10"
   }
 }
