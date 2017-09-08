@@ -10,7 +10,26 @@ with an `isOnline` prop that indicates the online/offline status of the applicat
 This HOC uses the browser's native `window.navigator.onLine` property and its `online`/`offline`
 events to determine the current offline state.
 
-## API
+## OfflineComponent API
+
+This component uses the render-children-prop pattern proposed by the amazing Michael Jackson.
+
+```javascript
+import React from 'react';
+import OfflineComponent from 'react-offline-hoc/lib/OfflineComponent';
+
+const MyComponent = () => (
+  <OfflineComponent>
+    {(isOnline) => (
+      <div>
+        {isOnline ? 'Online' : 'Offline'}
+      </div>
+    )}
+  </OfflineComponent>
+);
+```
+
+## HoC API
 
 #### `this.props.isOnline`
 
